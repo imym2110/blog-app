@@ -1,0 +1,66 @@
+@import "/src/assets/mixins.scss";
+@import "/src/assets/custom-colors.scss";
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    margin: auto;
+    padding: 200px 0px 200px 0px;
+}
+
+.login-details {
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.login-submit {
+    background-color: $greenyellow;
+    border-radius: 10px;
+    padding: 5px 10px 5px 10px;
+    margin: 10px 10px;
+    transition: all 0.3s linear 0.1s;
+
+    &:hover {
+        background-color: $blog-heading-color;
+        border-radius: 20px;
+    }
+}
+
+.logout{
+    background-color: $greenyellow;
+    border-radius: 10px;
+    padding: 5px 10px 5px 10px;
+    display: flex;
+    margin: 30px auto;
+    width: 11%;
+    justify-content: center;
+    transition: all 0.3s linear 0.1s;
+
+    &:hover {
+        background-color: $blog-heading-color;
+        border-radius: 20px;
+    }
+}
+
+$breakpoint-tablet: 1199px;
+
+@media (max-width: $breakpoint-tablet) {
+
+    .login-form{
+        align-items: center;
+    }
+    .login-details{
+        min-width: 179px;
+    }
+    p{
+        min-width: 140px;
+    }
+    .login-submit{
+        min-width: 165px;
+    }
+    .logout{
+        min-width: 165px;
+    }
+}

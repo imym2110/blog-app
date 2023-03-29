@@ -1,0 +1,17 @@
+<!-- {{mydata | json}} -->
+<div>
+<ul *ngFor="let fake of mydata">
+    <li>ID : {{fake.id}}</li>
+    <li>NAME : {{fake.attributes?.name}}</li>
+    <li>DESCRIPTION : {{fake.attributes?.description}}</li>
+    <li>CATEGORY :
+        <ul *ngFor="let catg of fake.attributes?.categories?.data">
+            <li>{{ catg.attributes.name }}</li>
+        </ul>
+    </li>
+    <p *ngFor="let img of fake.attributes?.image?.data">
+    <img class="image" [src]="this.apiUrl + img.attributes.url" [alt]="img.attributes.name"> 
+    </p>
+    <hr>
+</ul>
+</div>

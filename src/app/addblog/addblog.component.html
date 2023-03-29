@@ -1,0 +1,31 @@
+<button (click)="testdata()">TestData</button>
+
+
+<form [formGroup]="addblogform" class="add-blog-form" (ngSubmit)="onSubmit()">
+    <input type="text" name="name" placeholder="Name" class="add-details" formControlName="name">
+    <input type="text" name="email" placeholder="Email" class="add-details" formControlName="email">
+    <textarea name="description" cols="22" rows="5" placeholder="Write your Hobbies"
+        formControlName="description" ngModel></textarea>
+    <p>complete the form to enable the button</p>
+    <button type="submit" class="blog-sumbit">SUBMIT</button>
+</form>
+
+<div>
+   <!-- <h1>{{addblogform.value | json}} </h1>  -->
+<table class="array-table" *ngFor="let data of blogdetails">
+    <th class="array-row">
+        <tr class="array-cell">{{data.name}}</tr>
+    </th>
+    <th class="array-row">
+        <tr class="array-cell">{{data.email}}</tr>
+    </th>
+    <th class="array-row">
+        <tr class="array-cell">{{data.description}}</tr>
+    </th>
+    <th class="array-row">
+    <button mat-button class="button-remove" (click)="remove(id)">
+        Delete
+    </button>
+</th>
+</table>
+</div>

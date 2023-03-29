@@ -1,0 +1,39 @@
+@mixin mixin-imgdefault
+{
+    height: auto;
+    max-width: 100%;
+}
+
+@mixin bg_image
+{
+    background-image: url(images/bg-image.jpg);
+    background-size: cover;
+    padding: 20px 0px;
+}
+
+@mixin dflexXcenter 
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+@mixin spacing
+{
+    margin: 0 0;
+    padding: 0 0;
+}
+
+@mixin line-clamp
+{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+}
+
+@mixin header-heading
+{
+    color: $blackcolor;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+}

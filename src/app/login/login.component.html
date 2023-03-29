@@ -1,0 +1,13 @@
+<section>
+  <form  *ngIf="!isLoggedInFlag" [formGroup]="form" class="login-form" (ngSubmit)="onSubmit()">
+    <input type="text" id="email" placeholder="Your Email" class="login-details" formControlName="email">
+    <input type="password" id="password" placeholder="password" class="login-details" formControlName="password">
+    <p>complete the form to enable the button</p>
+    <button type="submit" class="login-submit" [disabled]="!form.valid">LOGIN</button>
+  </form>
+  <button *ngIf="isLoggedInFlag" class="logout" (click)="logOut()">Logout</button>
+  <ngb-alert [dismissible]="true" *ngIf="isSubmitted && !isValidUser">
+    <strong>Wrong authentication!</strong>
+    Please enter valid authentication
+  </ngb-alert>
+</section>

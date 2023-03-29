@@ -1,0 +1,106 @@
+@import "/src/assets/mixins.scss";
+@import "/src/assets/custom-colors.scss";
+
+header {
+    position: relative;
+    width: 100%;
+    z-index: 4;
+    border-bottom: 1px solid #ccc;
+    .container {
+
+        .row {
+            justify-content: space-between;
+        }
+
+        .navbar-logo {
+            font-size: 45px;
+            margin-top: 30px;
+            color: $blackcolor;
+        }
+
+        .header-list {
+            display: flex;
+            justify-content: flex-end;
+            @include spacing;
+            list-style-type: none;
+
+            >li {
+                >a {
+                    @include dflexXcenter;
+                    margin: 43px 23px;
+                    color: $blackcolor;
+                    text-decoration: none;
+                    font-size: 24px;
+                }
+            }
+        }
+
+        .dropdown {
+            visibility: hidden;
+            position: absolute;
+            margin: 43px 23px;
+
+            >ul {
+                >li {
+                    >a {
+                        z-index: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+$breakpoint-mobile: 767px;
+
+@media (max-width: $breakpoint-mobile) {
+    .navbar-logo {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    header {
+        .container {
+
+            .header-list {
+                visibility: hidden;
+                position: fixed;
+            }
+
+            .dropdown {
+                visibility: initial;
+                display: flex;
+                justify-content: flex-end;
+                margin: 20px 10px;
+            }
+
+            .dropdown-button {
+                margin: auto;
+                padding: 0px;
+                text-align: end;
+                display: flex;
+                justify-content: flex-end;
+            }
+
+            .dropdown-image {
+                width: 40px;
+            }
+        }
+    }
+}
+
+$breakpoint-mini: 450px;
+
+@media (max-width: $breakpoint-mini) {
+    header {
+        .container {
+            .header-list {
+                >li {
+                    >a {
+                        margin: 10px 10px;
+                    }
+                }
+            }
+        }
+    }
+}

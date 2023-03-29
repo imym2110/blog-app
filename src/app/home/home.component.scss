@@ -1,0 +1,47 @@
+@import "/src/assets/mixins.scss";
+@import "/src/assets/custom-colors.scss";
+
+.header-heading {
+    @include header-heading;
+    width: fit-content;
+    margin: 220px auto 10px auto;
+    font-size: 50px;
+}
+
+.header-more-heading {
+    @include header-heading;
+    margin: 3px auto;
+}
+
+.header-link {
+    @include dflexXcenter;
+    margin-top: 55px;
+    margin-bottom: 255px;
+
+    .header-link-item {
+        text-decoration: none;
+        color: $blackcolor;
+        margin: 10px 10px;
+        padding: 8px 10px;
+        border: 1px solid $blackcolor;
+        border-radius: 7px;
+        transition: all 0.3s linear 0.1s;
+
+        &:hover {
+            background-color: $greenyellow;
+            color: $blackcolor;
+            transform: rotate(-10deg);
+        }
+    }
+}
+
+.slider-content{
+    z-index: 3;
+    position: absolute;
+    width: 100%;
+}
+
+.carousel-div{
+    display: block;
+    margin-top: -123px;
+}
