@@ -1,0 +1,38 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+@import "./assets/mixins";
+@import "./assets/custom-colors";
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+@import 'ngx-toastr/toastr';
+*
+{
+    box-sizing: border-box;
+}
+
+body
+{
+    @include spacing;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+
+
+// .homecarousel-wrap {
+//     .carouselbox
+//     {
+//         position: relative;
+//         .carousel-control-prev {
+//             position: absolute;
+//             top: 50%;
+//             transform: translateY(-50%);
+//             width: auto;
+//             bottom: auto;
+//         }
+//     }
+   
+
+// }
+
